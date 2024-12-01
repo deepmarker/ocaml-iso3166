@@ -1,0 +1,5 @@
+(executable
+ (name gen)
+ (public_name iso3166-gen)
+ (preprocess (pps pla.ppx))
+ (libraries pla ezjsonm ocplib-json-typed))

@@ -1,0 +1,11 @@
+(library
+ (name iso3166)
+ (public_name iso3166)
+ (preprocess (pps ppx_sexp_conv))
+ (libraries sexplib))
+
+(rule
+ (targets iso3166_base.ml)
+ (deps all.json)
+ (action
+  (run iso3166-gen all.json iso3166_base.ml)))
